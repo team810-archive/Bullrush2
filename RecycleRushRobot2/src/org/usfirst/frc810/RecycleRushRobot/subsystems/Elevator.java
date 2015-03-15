@@ -60,7 +60,7 @@ public class Elevator extends PIDSubsystem {
     public void joystickrun(Joystick manipulator){
     	
     	double speed = 0;
-    	double potentval = analogPotentiometer1.getVoltage();
+    	/*double potentval = analogPotentiometer1.getVoltage();
     	boolean buttonpressed = false;
     	for (int button = 1; button <= 4; button ++){
     		if(manipulator.getRawButton(button)) buttonpressed = true;
@@ -75,7 +75,7 @@ public class Elevator extends PIDSubsystem {
     		else if(manipulator.getRawButton(4))
     			speed = PotenOps.getValue(potentval, PotenOps.CAN_2);
     	}
-    	else{
+    	else{*/
     		speed = manipulator.getRawAxis(3) + manipulator.getRawAxis(1);
     		if (speed > 1) speed = 1;
     		if (speed < -1) speed = -1;
@@ -102,8 +102,8 @@ public class Elevator extends PIDSubsystem {
     		
     		
         if(speed>0) {
-        	elevatorSpeedController1.set(.5*speed);
-        	return;
+        	speed *= .5;
+        	
         }/*
         else if(speed<0) {
         	elevcontroller.set(speed);
@@ -112,7 +112,7 @@ public class Elevator extends PIDSubsystem {
         elevcontroller.set(speed);
         }
     		 */
-    	}
+    	//}
     	((SafePWM) elevatorSpeedController1).setSafetyEnabled(true);
     	elevatorSpeedController1.set(speed);
     	
