@@ -145,6 +145,7 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during autonomous
      */
     public void autonomousPeriodic() {
+    	/* ENABLE MOTOR SAFETY LATER
         
     	elevcontroller.setSafetyEnabled(false);
         //do{
@@ -158,11 +159,11 @@ public class Robot extends IterativeRobot {
         gripper.close();
        // Timer.delay(.5);
         driveSystem.autoMode(.5, 0, 0, 1.5);
-        driveSystem.autoMode(0, 1, 0, 2.5);
+        driveSystem.autoMode(0, 1, 0, 2.75);
        // Timer.delay(.5);
         //elevcontroller.set(1);
         //driveSystem.autoMode(0, .4, 0, 3);
-       Timer.delay(10);
+       Timer.delay(10.25);
         
         
         
@@ -173,9 +174,10 @@ public class Robot extends IterativeRobot {
         Timer.delay(.5);
         elevcontroller.set(0);
         */
+    	/* <-- DELETE THIS
         elevcontroller.setSafetyEnabled(true);
         
-        
+        */ //<-- AND THIS
     }
 
     public void teleopInit() {
