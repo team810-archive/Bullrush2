@@ -145,7 +145,7 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during autonomous
      */
     public void autonomousPeriodic() {
-    	/* ENABLE MOTOR SAFETY LATER
+    	
         
     	elevcontroller.setSafetyEnabled(false);
         //do{
@@ -174,10 +174,10 @@ public class Robot extends IterativeRobot {
         Timer.delay(.5);
         elevcontroller.set(0);
         */
-    	/* <-- DELETE THIS
+    	
         elevcontroller.setSafetyEnabled(true);
         
-        */ //<-- AND THIS
+        
     }
 
     public void teleopInit() {
