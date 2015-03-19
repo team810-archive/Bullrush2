@@ -116,39 +116,7 @@ public class Robot extends IterativeRobot {
     }
 
     public void autonomousInit() {
-        // schedule the autonomous command (example)
-       // if (autonomousCommand != null) autonomousCommand.start();
-    /*elevcontroller.setSafetyEnabled(false);
-    do{
-    	elevcontroller.set(1);
-    } while (!RobotMap.elevatorLowSwitch.get());
-    
-    	elevcontroller.set(-1);
-    Timer.delay(6.6);
-    
-    elevcontroller.set(0);
-   // Timer.delay(.5);
-    driveSystem.autoMode(.5, 0, 0, 1.65);
-   // Timer.delay(.5);
-    elevcontroller.set(1);
-    driveSystem.autoMode(0, .4, 0, 3);
-   // Timer.delay(.5);
-    
-    
-    
-    elevcontroller.set(0);
-   // Timer.delay(.5);
-    driveSystem.autoMode(0, -.5, 0, 1);
-    elevcontroller.setSafetyEnabled(true);
-    */	
-    }
-
-    /**
-     * This function is called periodically during autonomous
-     */
-    public void autonomousPeriodic() {
-    	
-        //IF you want to use forward auto, comment here until you see STOP
+//IF you want to use forward auto, comment here until you see STOP
     	
     	elevcontroller.setSafetyEnabled(false);
     	/*
@@ -171,13 +139,23 @@ public class Robot extends IterativeRobot {
         *///STOP
         
        //if you want to drive backward into auto zone but set up normal orientation, comment this in!
+    	driveSystem.autoMode(0,1,0,.2);
     	elevcontroller.set(-.5);
-    	Timer.delay(.5);
+    	Timer.delay(1);
     	elevcontroller.set(0);
         driveSystem.autoMode(0, -1, 0, 1.5);
         Timer.delay(13);
-        //till here
-       
+        elevcontroller.setSafetyEnabled(true);
+        //till here	
+    }
+
+    /**
+     * This function is called periodically during autonomous
+     */
+    public void autonomousPeriodic() {
+    	
+        
+    	elevcontroller.setSafetyEnabled(true);
         /*elevcontroller.set(0);
        // Timer.delay(.5);
         driveSystem.autoMode(0, .5, 0, 5);
@@ -186,7 +164,7 @@ public class Robot extends IterativeRobot {
         elevcontroller.set(0);
         */
     	
-        elevcontroller.setSafetyEnabled(true);
+        
         
         
     }
@@ -203,6 +181,7 @@ public class Robot extends IterativeRobot {
         drive = new Drive();
         //RobotMap.gripperCompressor1.setClosedLoopControl(true);
         ElevDisabled = false;
+        elevcontroller.setSafetyEnabled(true);
     }
 
     /**

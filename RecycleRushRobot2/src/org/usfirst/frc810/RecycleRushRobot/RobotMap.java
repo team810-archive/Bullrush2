@@ -32,7 +32,7 @@ public class RobotMap {
     public static SpeedController driveSystemBackRight;
     public static RobotDrive driveSystemDrive;
     public static AnalogAccelerometer driveSystemAnalogAccelerometer1;
-    public static Gyro driveSystemGyro1;
+    //public static Gyro driveSystemGyro1;
     public static DigitalInput elevatorLowSwitch;
     public static DigitalInput elevatorHighSwitch;
     public static SpeedController elevatorElevatorSpeedController1;
@@ -80,9 +80,9 @@ public class RobotMap {
         //LiveWindow.addSensor("Drive System", "AnalogAccelerometer 1", driveSystemAnalogAccelerometer1);
         //driveSystemAnalogAccelerometer1.setSensitivity(0.0);
         //driveSystemAnalogAccelerometer1.setZero(2.5);
-        driveSystemGyro1 = new Gyro(0);
-        LiveWindow.addSensor("Drive System", "Gyro 1", driveSystemGyro1);
-        driveSystemGyro1.setSensitivity(0.007);
+        //driveSystemGyro1 = new Gyro(0);
+        //LiveWindow.addSensor("Drive System", "Gyro 1", driveSystemGyro1);
+        //driveSystemGyro1.setSensitivity(0.007);
         elevatorLowSwitch = new DigitalInput(9);
         LiveWindow.addSensor("Elevator", "Low Switch", elevatorLowSwitch);
         
