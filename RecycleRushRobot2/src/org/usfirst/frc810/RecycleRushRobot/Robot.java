@@ -172,7 +172,7 @@ public class Robot extends IterativeRobot {
         
        //if you want to drive backward into auto zone but set up normal orientation, comment this in!
        
-        driveSystem.autoMode(0, -1, 0, 2.5);
+        driveSystem.autoMode(0, -1, 0, 1.5);
         Timer.delay(12.5);
         //till here
        
