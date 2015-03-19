@@ -192,7 +192,7 @@ public class Robot extends IterativeRobot {
     
     public void teleopPeriodic() {
     	Scheduler.getInstance().run();
-    	System.out.println(RobotMap.elevatorAnalogPotentiometer1.getVoltage());
+    	//System.out.println(RobotMap.elevatorAnalogPotentiometer1.getVoltage());
     	if(oi.getmanipulator().getRawButton(9))
     		ElevDisabled = false;
     	if(oi.getmanipulator().getRawButton(10))

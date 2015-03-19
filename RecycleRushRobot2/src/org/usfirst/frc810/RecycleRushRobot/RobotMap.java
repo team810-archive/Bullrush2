@@ -36,7 +36,7 @@ public class RobotMap {
     public static DigitalInput elevatorLowSwitch;
     public static DigitalInput elevatorHighSwitch;
     public static SpeedController elevatorElevatorSpeedController1;
-    public static AnalogInput elevatorAnalogPotentiometer1;
+    //public static AnalogInput elevatorAnalogPotentiometer1;
     public static Compressor gripperCompressor1;
     public static Solenoid gripperSolenoid1;
     public static BuiltInAccelerometer accelerometer;

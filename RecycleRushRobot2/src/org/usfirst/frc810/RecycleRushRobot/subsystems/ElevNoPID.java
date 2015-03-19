@@ -18,7 +18,7 @@ public class ElevNoPID extends Subsystem {
     DigitalInput lowSwitch = RobotMap.elevatorLowSwitch;
     DigitalInput highSwitch = RobotMap.elevatorHighSwitch;
     SpeedController elevatorSpeedController1 = RobotMap.elevatorElevatorSpeedController1;
-    AnalogInput analogPotentiometer1 = RobotMap.elevatorAnalogPotentiometer1;
+   // AnalogInput analogPotentiometer1 = RobotMap.elevatorAnalogPotentiometer1;
 
 
     public void initDefaultCommand() {
