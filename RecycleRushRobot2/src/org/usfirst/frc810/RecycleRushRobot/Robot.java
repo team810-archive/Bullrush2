@@ -171,9 +171,11 @@ public class Robot extends IterativeRobot {
         *///STOP
         
        //if you want to drive backward into auto zone but set up normal orientation, comment this in!
-       
+    	elevcontroller.set(-.5);
+    	Timer.delay(.5);
+    	elevcontroller.set(0);
         driveSystem.autoMode(0, -1, 0, 1.5);
-        Timer.delay(12.5);
+        Timer.delay(13);
         //till here
        
         /*elevcontroller.set(0);
