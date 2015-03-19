@@ -18,6 +18,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.BuiltInAccelerometer;
 
 import org.usfirst.frc810.RecycleRushRobot.commands.*;
 import org.usfirst.frc810.RecycleRushRobot.subsystems.*;
@@ -43,6 +44,7 @@ public class Robot extends IterativeRobot {
     public static Elevator elevator;
     public static Gripper gripper;
     public static ElevNoPID elevnopid;
+    
     Talon elevcontroller;
     
 
@@ -146,8 +148,10 @@ public class Robot extends IterativeRobot {
      */
     public void autonomousPeriodic() {
     	
-        
+        //IF you want to use forward auto, comment here until you see STOP
+    	
     	elevcontroller.setSafetyEnabled(false);
+    	/*
         //do{
         //	elevcontroller.set(.75);
         //} while (!RobotMap.elevatorLowSwitch.get());
@@ -164,9 +168,14 @@ public class Robot extends IterativeRobot {
         //elevcontroller.set(1);
         //driveSystem.autoMode(0, .4, 0, 3);
        Timer.delay(10.25);
+        *///STOP
         
-        
-        
+       //if you want to drive backward into auto zone but set up normal orientation, comment this in!
+       
+        driveSystem.autoMode(0, -1, 0, 2.5);
+        Timer.delay(12.5);
+        //till here
+       
         /*elevcontroller.set(0);
        // Timer.delay(.5);
         driveSystem.autoMode(0, .5, 0, 5);
