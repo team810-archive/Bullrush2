@@ -119,7 +119,7 @@ public class Robot extends IterativeRobot {
 //IF you want to use forward auto, comment here until you see STOP
     	
     	elevcontroller.setSafetyEnabled(false);
-    	/*
+    	
         //do{
         //	elevcontroller.set(.75);
         //} while (!RobotMap.elevatorLowSwitch.get());
@@ -135,10 +135,11 @@ public class Robot extends IterativeRobot {
        // Timer.delay(.5);
         //elevcontroller.set(1);
         //driveSystem.autoMode(0, .4, 0, 3);
-       Timer.delay(10.25);
-        *///STOP
+      // Timer.delay(10.25);
+        //STOP
         
        //if you want to drive backward into auto zone but set up normal orientation, comment this in!
+    	/*
     	driveSystem.autoMode(0,1,0,.2);
     	elevcontroller.set(-.5);
     	Timer.delay(1);
@@ -146,6 +147,7 @@ public class Robot extends IterativeRobot {
         driveSystem.autoMode(0, -1, 0, 1.5);
         Timer.delay(13);
         elevcontroller.setSafetyEnabled(true);
+        */
         //till here	
     }
 
