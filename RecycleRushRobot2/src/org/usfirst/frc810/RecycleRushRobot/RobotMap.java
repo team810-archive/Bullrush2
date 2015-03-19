@@ -80,9 +80,9 @@ public class RobotMap {
         //LiveWindow.addSensor("Drive System", "AnalogAccelerometer 1", driveSystemAnalogAccelerometer1);
         //driveSystemAnalogAccelerometer1.setSensitivity(0.0);
         //driveSystemAnalogAccelerometer1.setZero(2.5);
-        //driveSystemGyro1 = new Gyro(0);
-        //LiveWindow.addSensor("Drive System", "Gyro 1", driveSystemGyro1);
-       // driveSystemGyro1.setSensitivity(0.007);
+        driveSystemGyro1 = new Gyro(0);
+        LiveWindow.addSensor("Drive System", "Gyro 1", driveSystemGyro1);
+        driveSystemGyro1.setSensitivity(0.007);
         elevatorLowSwitch = new DigitalInput(9);
         LiveWindow.addSensor("Elevator", "Low Switch", elevatorLowSwitch);
         
@@ -93,8 +93,8 @@ public class RobotMap {
         elevatorElevatorSpeedController1 = new Talon(2);
         LiveWindow.addActuator("Elevator", "Elevator Speed Controller 1", (Talon) elevatorElevatorSpeedController1);
         
-        elevatorAnalogPotentiometer1 = new AnalogInput(0);
-        LiveWindow.addSensor("Elevator", "Analog Potentiometer 1", elevatorAnalogPotentiometer1);
+        //elevatorAnalogPotentiometer1 = new AnalogInput(1);
+        //LiveWindow.addSensor("Elevator", "Analog Potentiometer 1", elevatorAnalogPotentiometer1);
         
         gripperCompressor1 = new Compressor(0);
         
